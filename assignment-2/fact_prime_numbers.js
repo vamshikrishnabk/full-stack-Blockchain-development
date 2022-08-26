@@ -16,7 +16,7 @@ function prime(start_number,end_number){
                 count_divisors+=1
             }
         }
-        if (count_divisors == 1){
+        if (count_divisors === 1){
             let fact=1;
             for(let p=i;p>=1;p--)
             fact*=p
@@ -25,7 +25,8 @@ function prime(start_number,end_number){
     }
 }
 if (start_number>0 && end_number >0)
-    if (start_number == 1)
-        prime(start_number+1,end_number)
-    else
-        prime(start_number,end_number)
+    if(end_number > start_number)
+        if (start_number === 1)
+            prime(start_number+1,end_number)
+        else
+            prime(start_number,end_number)
